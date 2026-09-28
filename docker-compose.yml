@@ -1,0 +1,13 @@
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    restart: unless-stopped          # auto-restarts on crash or VPS reboot -> 24/7
+    container_name: revxl-trader
+    env_file: .env                   # API keys + live switch live here, never in config.json
+    volumes:
+      - "./user_data:/freqtrade/user_data"
+    command: >
+      trade
+      --logfile /freqtrade/user_data/logs/freqtrade.log
+      --config /freqtrade/user_data/config.json
+      --strategy RevXLRegime
