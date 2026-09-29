@@ -35,3 +35,16 @@ Use Kraken API keys with withdrawals OFF, and only after at least 30 days of pap
 This repo is the strategy only. The **[full Trend Bot Kit](https://revxljohn.gumroad.com/l/trend-bot-kit)** adds the walk-forward lab (10 strategies, data fetcher, results CSV), the Kraken vs Coinbase feed cross-check, the reserve ensemble strategy and a Mac 24/7 setup.
 
 Write-ups: [jcalloway.hashnode.dev](https://jcalloway.hashnode.dev) and [jcalloway.dev](https://jcalloway.dev).
+
+
+## Taxes on bot trades (US)
+
+Every sell the bot makes is a taxable event. 2026 is the first year Kraken's Form 1099-DA can include cost basis, and only for coins bought in the same account from Jan 1, 2026, so check it before filing.
+
+Step 1: in Kraken, open Documents and export Trades from your first trade to today.
+
+Step 2: get a quick FIFO estimate and a list of sells missing basis with the free, in-browser [Kraken tax estimator](https://jcalloway.dev/tools/kraken-crypto-tax-estimator).
+
+Step 3: for the actual filing (Form 8949), import the export into tax software such as [CoinLedger](https://jcalloway.dev/go/coinledger) (code CRYPTOTAX10 for 10% off) or [Koinly](https://jcalloway.dev/go/koinly).
+
+Partner links: the author may earn a commission. Not tax advice.
